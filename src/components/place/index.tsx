@@ -1,9 +1,9 @@
 import { Image, Text, TouchableOpacity, TouchableOpacityProps, View } from "react-native";
+import { IconTicket } from "@tabler/icons-react-native";
 
 import { colors } from '@/styles/theme';
 
 import { style } from './styles';
-import { IconTicket } from "@tabler/icons-react-native";
 
 export type Place = {
   id: string;
@@ -25,7 +25,7 @@ export function Place({ place, ...rest }: Props) {
 
       <View style={style.content}>
         <Text style={style.name}>{place.name}</Text>
-        <Text style={style.description}>{place.description}</Text>
+        <Text style={style.description} numberOfLines={2}>{place.description}</Text>
 
         <View style={style.footer}>
           <IconTicket size={16} color={colors.red.base} />
